@@ -2,16 +2,24 @@ import React, { Component } from 'react';
 
 class Formulario extends Component{
     //Son para leer los campos de un formulario
-    marcaRef =React.createRef();
-    yearRef = React.createRef();
-    planBasicoRef = React.createRef();
-    planCompletoRef = React.createRef();
+    marcaRef=React.createRef();
+    yearRef=React.createRef();
+    planBasicoRef=React.createRef();
+    planCompletoRef=React.createRef();
+    planRef=React.createRef();
     //Sirve para que la URL no cambie con información default
     CotizadorSeguros=(e)=>{
         e.preventDefault();
+        //Forma abreviada de if else para dar valor a la variable plan a partir del plan seleccionado
+        const plan = this.planBasicoRef.current.checked ? 'basico' : 'completo';
 
-        console.log('Enviado');
-        console.log(this.marcaRef.current.value,this.yearRef.current.value);
+         //Crear el objeto
+        const infoAuto ={
+            marca:this.marcaRef.current.value,
+            year:this.yearRef.current.value,
+            plan:plan
+        }
+        console.log(infoAuto);
     }
     render(){
         return(
@@ -42,10 +50,10 @@ class Formulario extends Component{
                     </select>
                 </div>
                 <div className="campo">
-                    <label>Plan:</label>
-                    <input type="radio" name="plan" value="basico" ref={this.planBasicoRef}/> Básico
-                    <input type="radio" name="plan" value="completo" ref={this.planCompletoRef}/> Completo
-                </div>
+                      <label>Plan:</label>
+                      <input type="radio" ref={this.planBasicoRef}  name="plan" value="basico"/> Básico
+                      <input type="radio" ref={this.planCompletoRef}  name="plan" value="completo"/> Completo
+                  </div>
 
                 <button type="submit" className="boton">Cotizar</button>
             </form>
