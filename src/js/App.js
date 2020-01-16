@@ -3,13 +3,23 @@ import Header from './Header';
 import Formulario from './Form';
 
 
-function App() {
-  return (
+class App extends Component {
+  //Creo un método cotizarSeguro
+
+  cotizarSeguro = (datos) =>{
+      console.log(datos);
+  }
+render(){
+  return(
     <div className="container ">
       <Header />
-      <Formulario />
-    </div>
+      <Formulario
+      cotizarSeguro={this.cotizarSeguro}
+      />
+    </div>    
   );
+}
+
 }
 
 export default App;

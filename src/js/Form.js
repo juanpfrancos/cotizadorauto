@@ -19,7 +19,8 @@ class Formulario extends Component{
             year:this.yearRef.current.value,
             plan:plan
         }
-        console.log(infoAuto);
+        //Enviar Infoauto al componente principal
+        this.props.cotizarSeguro(infoAuto);
     }
     render(){
         return(
