@@ -26,8 +26,8 @@ class App extends Component {
       resultado = calcularMarca(marca) * resultado;
       //Planes: El básico incrementa el valor 20% y el completo 50%
       let incrementoPlan = obtenerPlan(plan);
-      //Dependiendo del plan incrementar
-      resultado = incrementoPlan * resultado;
+      //Le quito los decimales con la función parsefloat
+      resultado = parseFloat(incrementoPlan * resultado).toFixed(0);
       
 
       //Creo objeto para el resumen
