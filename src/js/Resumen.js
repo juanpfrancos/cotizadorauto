@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
 
+
 class Resumen extends Component{
-    render(){
-        //Traemos los datos de props con destructuring para imprimirlos en el componente
-        const{marca,year,plan}= this.props.datos;
-        return(
-        <div className="resumen">
-            <h2>Resumen de Cotización</h2>
-                <li>Marca: {marca}</li>
-                <li>Plan: {plan}</li>
-                <li>Año: {year}</li>
+    
+//Creo el método mostrarResumen 
+        mostrarResumen = () => {
+            const{marca,year,plan}= this.props.datos;
+            // Si no hay marca o no hay año o no hay plan, retornar mostrarResumen vacío
+            if (!marca || !year || !plan) return null;
             
-        </div>  
+            return(                
+                <div className="resumen">
+                <h2>Resumen de Cotización</h2>
+                    <li>Marca: {marca}</li>
+                    <li>Plan: {plan}</li>
+                    <li>Año: {year}</li>
+                </div>  
+            )
+        }
+        
+        render(){
+        
+        return(
+            <div>
+                { this.mostrarResumen()}
+            </div>
         )
     }
 }{}
