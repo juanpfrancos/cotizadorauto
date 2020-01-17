@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { primeraMayuscula } from './Helper';
 
 
 class Resumen extends Component{
@@ -12,8 +13,8 @@ class Resumen extends Component{
             return(                
                 <div className="resumen">
                 <h2>Resumen de Cotización</h2>
-                    <li>Marca: {marca}</li>
-                    <li>Plan: {plan}</li>
+                    <li>Marca: {primeraMayuscula(marca)}</li>
+                    <li>Plan: {primeraMayuscula(plan)}</li>
                     <li>Año: {year}</li>
                 </div>  
             )
