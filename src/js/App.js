@@ -4,6 +4,11 @@ import Formulario from './Form';
 import {obtenerDiferenciaAnio, calcularMarca, obtenerPlan} from './Helper'
 
 class App extends Component {
+ //Creo un State Vacio
+  state ={
+    resultado : '',
+    datos:{}
+  }
   //Creo un método cotizarSeguro
 
   cotizarSeguro = (datos) =>{
@@ -23,8 +28,13 @@ class App extends Component {
       let incrementoPlan = obtenerPlan(plan);
       //Dependiendo del plan incrementar
       resultado = incrementoPlan * resultado;
-      //Ya tenemos el costo
-      console.log(resultado);
+      
+
+      
+      //Lleno el State con el resultado
+      this.setState({
+        resultado : resultado
+      })
 
   }
 
