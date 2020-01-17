@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Header from './Header';
-import Formulario from './Form';
+import React, { Component } from 'react'
+import Header from './Header'
+import Formulario from './Form'
 import {obtenerDiferenciaAnio, calcularMarca, obtenerPlan} from './Helper'
-
+import Resumen from './Resumen'
 class App extends Component {
  //Creo un State Vacio
   state ={
@@ -52,6 +52,12 @@ render(){
       <Header />
       <Formulario
       cotizarSeguro={this.cotizarSeguro}
+      />
+      
+      <Resumen
+      //Paso el state por medio props al componente Resumen
+      datos={this.state.datos}
+      resultado={this.state.resultado}
       />
     </div>    
   );
