@@ -17,8 +17,8 @@ class App extends Component {
       const {marca, plan, year } = datos;
 
       //Lógica para el cálculo del valor del seguro
-      //Base de 2000
-      let resultado = 2000;
+      //Base de 200000
+      let resultado = 200000;
       //Obtener la diferencia de años y por cada año restar el 4%
       const diferencia = obtenerDiferenciaAnio(year);
       resultado -= ((diferencia * 3) * resultado) / 100;
@@ -48,7 +48,7 @@ class App extends Component {
 
 render(){
   return(
-    <div className="container ">
+    <div className="contenedor">
       <Header />
       <Formulario
       cotizarSeguro={this.cotizarSeguro}
@@ -60,7 +60,7 @@ render(){
       resultado={this.state.resultado}
       />
     </div>    
-  );
+  )
 }
 
 }

@@ -32,6 +32,6 @@ class Resumen extends Component{
             </div>
         )
     }
-}{}
+}
 
 export default Resumen; 
