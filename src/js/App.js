@@ -30,10 +30,17 @@ class App extends Component {
       resultado = incrementoPlan * resultado;
       
 
-      
+      //Creo objeto para el resumen
+      const datosAuto = {
+        marca: marca,
+        plan: plan,
+        year: year
+      }
+
       //Lleno el State con el resultado
       this.setState({
-        resultado : resultado
+        resultado : resultado,
+        datos: datosAuto
       })
 
   }
