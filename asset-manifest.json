@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cotizadorauto/static/css/main.ea55a18a.chunk.css",
+    "main.js": "/cotizadorauto/static/js/main.40004b6d.chunk.js",
+    "main.js.map": "/cotizadorauto/static/js/main.40004b6d.chunk.js.map",
+    "runtime-main.js": "/cotizadorauto/static/js/runtime-main.d35ed88d.js",
+    "runtime-main.js.map": "/cotizadorauto/static/js/runtime-main.d35ed88d.js.map",
+    "static/js/2.ce77651b.chunk.js": "/cotizadorauto/static/js/2.ce77651b.chunk.js",
+    "static/js/2.ce77651b.chunk.js.map": "/cotizadorauto/static/js/2.ce77651b.chunk.js.map",
+    "index.html": "/cotizadorauto/index.html",
+    "precache-manifest.3d5d054ee1adf6c07feceb5616b3c6da.js": "/cotizadorauto/precache-manifest.3d5d054ee1adf6c07feceb5616b3c6da.js",
+    "service-worker.js": "/cotizadorauto/service-worker.js",
+    "static/css/main.ea55a18a.chunk.css.map": "/cotizadorauto/static/css/main.ea55a18a.chunk.css.map",
+    "static/js/2.ce77651b.chunk.js.LICENSE": "/cotizadorauto/static/js/2.ce77651b.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d35ed88d.js",
+    "static/js/2.ce77651b.chunk.js",
+    "static/css/main.ea55a18a.chunk.css",
+    "static/js/main.40004b6d.chunk.js"
+  ]
+}
